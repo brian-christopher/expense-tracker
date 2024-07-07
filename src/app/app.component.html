@@ -1,0 +1,9 @@
+<app-header />
+<div class="container">
+  <app-balance [total]="total()" />
+  <app-income-expenses [income]="income()" [expenses]="expenses()" />
+  <app-transaction-list [transactions]="transactions()" (transactionDeleted)="handleTransactionDeleted($event)" />
+  <app-add-transaction
+    (transactionSubmitted)="handleTransactionSubmitted($event)"
+  />
+</div>

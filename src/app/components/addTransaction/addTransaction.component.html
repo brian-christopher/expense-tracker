@@ -1,0 +1,24 @@
+<h3>Add new transaction</h3> 
+<form>
+  <div class="form-control">
+    <label for="text">Text</label>
+    <input
+      id="text"
+      type="text"
+      [formControl]="text"
+      placeholder="Enter text..."
+    />
+  </div>
+
+  <div class="form-control">
+    <label for="amount">Amount</label>
+    <input
+      id="amount"
+      type="number"
+      [formControl]="amount"
+      placeholder="Enter amount..."
+    />
+  </div>
+
+  <button type="button" (click)="onSubmit()" class="btn">Add transaction</button>
+</form>

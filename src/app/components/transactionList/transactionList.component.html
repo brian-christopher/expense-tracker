@@ -1,0 +1,9 @@
+<h3>History</h3>
+<ul class="list">
+  @for (transaction of transactions; track transaction.id) {
+  <li [ngClass]="{'minus': transaction.amount < 0, 'plus': transaction.amount > 0}">
+    {{ transaction.text }} <span>{{ transaction.amount | currency }}</span
+    ><button (click)="deleteTransaction(transaction.id)" class="delete-btn">x</button>
+  </li>
+  }
+</ul>
